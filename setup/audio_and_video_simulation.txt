@@ -1,0 +1,9 @@
+#启动相机模拟器
+sudo modprobe v4l2loopback exclusive-caps=1
+
+#启动麦克风模拟器
+sudo modprobe snd_aloop
+
+#开启ffmpeg推流 
+sudo ffmpeg -nostats -re -i /home/zijin/video/Maria.mp4 -r 10 -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
+sudo ffmpeg -nostats -re -i /home/siyin/video/1-9M.mp4 -r 10 -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0

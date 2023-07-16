@@ -1,0 +1,29 @@
+#安装开发工具
+apt-get install -y build-essential	#安装build-essential，一个包含了Linux系统中编译和构建程序所需的基本工具集合，如gcc、make、libc等。
+apt-get install -y g++				#安装g++，GNU C++编译器，用于编译和链接C++程序。
+apt-get install -y linux-generic		#安装linux-generic，一个Linux内核元包，包含了常用的内核模块和驱动程序，可用于构建Linux内核。
+apt-get install -y python			#安装Python解释器，一种流行的高级编程语言，可用于编写脚本、Web应用、数据分析等多个方面。
+apt-get install -y python-dev		#安装Python开发环境，包含了Python头文件和静态库文件，可用于编译和链接Python扩展模块。
+apt-get install -y python-pip		#安装pip，一个Python包管理工具，用于安装、升级和卸载Python包。
+apt-get install -y python-tk			#安装Python Tkinter库，用于创建Python图形用户界面。
+pip install pyautogui				#使用pip安装pyautogui，一个Python自动化测试工具，用于模拟鼠标和键盘输入、截图和图像识别等自动化操作。
+
+#cmake
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -		#下载CMake GPG公钥，并添加到apt-key管理的密钥库中，以验证CMake二进制包的来源。
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ bionic main'							#将CMake软件源添加到apt-get包管理器中，以便在Ubuntu Bionic版本上安装最新的CMake软件包。
+apt-get update																				#更新软件包列表，以便可以获取最新的CMake软件包。
+apt-get install -y cmake																	#安装CMake软件包，一款跨平台的自动化构建工具，可以生成跨平台的构建脚本，并帮助编译和构建各种类型的软件项目。
+
+
+#安装python包				
+pip install requests					#基于Python的HTTP库，用于发送HTTP请求和处理响应。
+pip install termcolor					#用于在控制台输出彩色文本的Python库。
+pip install Flask						#一个轻量级的Python Web框架，用于快速搭建Web应用程序。
+
+apt-get install -y libnetfilter-queue-dev 	#安装netfilter队列库，用于在Linux内核中实现网络包过滤、修改和重定向等功能。
+apt-get install -y ffmpeg				#安装FFmpeg，一个开源的音视频编解码器，支持多种格式的音视频文件的转换和处理。
+apt-get install -y v4l2loopback-dkms		#安装v4l2loopback，一种Linux内核模块，可以模拟一个虚拟的摄像头设备。
+apt-get install -y imagemagick			#安装ImageMagick，一个用于处理和转换图片文件的开源工具集。
+apt-get install -y vlc					#安装VLC媒体播放器，一个跨平台的开源媒体播放器，支持多种音视频格式的播放和流媒体服务。
+apt-get install -y pulseaudio			#安装PulseAudio，一个用于处理音频输入、输出和混音的开源软件，提供了高质量的音频处理和跨平台的支持。
+apt-get install -y alsa-utils			#安装ALSA Utils，一个用于处理Linux系统中音频设备的开源工具集，提供了多种音频设备管理和控制的命令行工具。

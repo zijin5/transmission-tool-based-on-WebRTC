@@ -1,0 +1,6 @@
+#开启collider信令服务器
+sudo nohup /root/webrtc/goWorkspace/bin/collidermain -port=8089 -tls=false -room-server=https://173.82.121.83:8090 &
+#开启Coturn穿透服务器
+nohup turnserver -L 173.82.179.198 -a -u admin:admin -v -f -r nort.gov &
+#开启房间和Web服务器
+sudo nohup /root/webrtc/google_appengine/dev_appserver.py --host=0.0.0.0 --port=8090 /root/webrtc/apprtc/out/app_engine  --skip_sdk_update_check &
